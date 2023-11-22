@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --body: #1C1E53;
+    --bg-light: #F5FCFF;
+    --heading-color: #282938;
+    --primary: #5E3BEE;
+    --secondary: #394149;
+    --custom-green: #006B6A;
+     --white: #FFFFFF;
+
+}
+
+/*---------------------------------------------
+# Header
+-----------------------------------------------*/
+
+header {
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    /* padding: 10px 0; */
+}
+
+
+.navbar ul {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--body);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.navbar>a:last-child {
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    padding: 10px 20px;
+    color: var(--primary);
+}
+
+.navbar ul li > a.active {
+    color: var(--primary);
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+ul li ul.dropdown {
+	background: var(--white);
+    border-radius: 5px;
+    min-width: 5rem;
+    position: absolute;
+    display: none;
+    padding: 1em;
+    left: 48%;
+    transition: all 0.5s ease;
+}
+
+.dropdown li {
+    padding: 0.5em;
+}
+
+ul li:hover > ul.dropdown {
+  display: block;
+}
+
+ul li ul.dropdown li:hover  {
+    border-radius: 4px;
+    background: var(--primary);
+    color: var(--white);
+    transition: all 0.5s ease;
+}
+
+.dropdown li:hover a {
+    color: var(--white);
+}
+
+
+
+/*----------------------------------------------
+# Hero 
+------------------------------------------------ */
+
+.hero-container {
+    background: var(--bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px;
+    
+}
+.hero-container article h1 {
+    color: var(--heading-color);
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 90px;
+}
+.hero-container article h1 span {
+    color: var(--primary);
+}
+
+.hero-container article img {
+    width: 100%;
+}
+
+/*----------------------------------------------
+# My Skill 
+------------------------------------------------ */
+
+.my-skills {
+    padding: 80px 20px;
+}
+
+.my-skills h4 {
+    color: var(--heading-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.my-skills h1 {
+    color: var(--heading-color);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 90px;
+}
+
+.my-experiences {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+}
+
+.my-experiences article{
+    padding: 32px;
+    border-radius: 10px;
+    background: skyblue;
+}
+
+.my-experiences article .icon-box {
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.my-experiences article .icon-box i {
+    font-size: 25px;
+    color: var(--custom-green);
+}
+
+.my-experiences article h5 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.my-experiences article p{
+    font-size: 20px;    
+}
+    
+
+/* ---------------------------------
+# Media Queries
+------------------------------------ */
+/* For Small device */
+@media screen and (max-width: 576px) {
+    .my-experiences {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+    }
+    
+}
+
+/* Tablet */
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .my-experiences {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+  }
+  
